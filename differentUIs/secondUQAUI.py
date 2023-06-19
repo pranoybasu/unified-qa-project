@@ -60,15 +60,12 @@ def main():
                     ("Get rejects", display_rejects),
                     ("Get medium matches", display_medium_matches),
                     ("Get unmapped schools", display_unmapped_schools),
-                    ("Exit", "exit"),
+                    ("Exit", sys.exit),
                 ],
             )
         ]
         answers = inquirer.prompt(questions)
         selected_option = answers["option"]
-        if selected_option == "exit":
-            print("Goodbye! Have a nice day!")
-            break
         selected_option()
 
 
